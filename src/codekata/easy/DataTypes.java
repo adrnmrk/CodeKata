@@ -4,7 +4,7 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-
+//Data Types Day 1
 public class DataTypes {
 
 	public static void main(String[] args) {
