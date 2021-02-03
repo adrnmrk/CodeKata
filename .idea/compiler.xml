@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="CodeKata" target="11" />
+      <module name="CodeKata" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
