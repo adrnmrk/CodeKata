@@ -1,9 +1,6 @@
 package codekata.easy;
 import java.util.*;
 
-import java.io.*;
-import java.util.*;
-
 class Node {
     int data;
     Node next;
@@ -15,11 +12,20 @@ class Node {
 
 class LinkedListDay15 {
 
-    public static  Node insert(Node head,int data) {
-        //Complete this method
-        LinkedList<String> myLinkedList = new LinkedList<String>();
-        myLinkedList.add(0, );
+    public static Node insert(Node head, int data) {
+        //create a new node if head is empty
+        if (head == null){
+            return new Node(data);
+        }
+        //create a new node if the next head is empty
+        else if (head.next == null){
+            head.next = new Node(data);
+        }
 
+        else{
+            insert(head.next, data);
+        }
+        return head;
     }
 
     public static void display(Node head) {
@@ -30,7 +36,7 @@ class LinkedListDay15 {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Node head = null;
         int N = sc.nextInt();
