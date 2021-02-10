@@ -1,6 +1,12 @@
 package codekata.easy;
 import java.util.*;
 
+/**
+ * Task
+ * Complete the insert function in your editor so that it creates a new Node (pass DATA as the Node constructor argument) and
+ * inserts it at the tail of the linked list referenced by the HEAD parameter.
+ * Once the new node is added, return the reference to the HEAD node
+ */
 class Node {
     int data;
     Node next;
