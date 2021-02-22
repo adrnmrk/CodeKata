@@ -23,19 +23,28 @@ public class InputShuffle {
 		String[] arrItems = scanner.nextLine().split("");
 		scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-		for (int i = 0; i < n; i++) {
+		//count from L to R
+		int counterForward = 0;
+		//count from R to L, using N as default value
+		int counterBackward = n;
 
-			int arrItem = Integer.parseInt(arrItems[i]);
-			int arrItem2 = Integer.parseInt(arrItems[n - 1]);
-			arr[i] = arrItem;
-			arr[n - 1] = arrItem2;
-			//update arrVal, add values of arrItem and arrItem2
-			arrVal = arrVal + arrItem + arrItem2;
-			n--;
+		for (int i = 0; i < n; i++) {
+			//check if the index is EVEN, then increment
+			if (i % 2 == 0){
+				arrVal = arrVal + Integer.parseInt(arrItems[counterForward]);
+				counterForward++;
+			}
+			//check if the index is ODD, then decrement
+			else {
+				arrVal = arrVal + Integer.parseInt(arrItems[counterBackward-1]);
+				counterBackward--;
+			}
 		}
 		System.out.println(arrVal);
 		scanner.close();
 	}
-	}
+}
+
+
 
 
