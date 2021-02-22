@@ -21,15 +21,13 @@ public class ArrayDay7 {
 	        String[] arrItems = scanner.nextLine().split(" ");
 	        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-	        //for (int i = 0; i < n; i++) {
-	        for (int i = n; i < n; i--) {
+	        for (int i = 0; i < n; i++) {
 	     	            
 	            int arrItem = Integer.parseInt(arrItems[i]);
 	            arr[i] = arrItem;
 	            //update arrVal, add value from right to left to reverse the order
-	            //arrVal = arrItem + " " + arrVal;
-	            arrVal = arrVal + " " + arrItem;
-	            System.out.println(arrVal);
+
+	            arrVal = arrItem + " " + arrVal;
 	        }
 	        System.out.println(arrVal);
 
