@@ -12,13 +12,13 @@ public class ArraysExercise1 {
 	    private static final Scanner scanner = new Scanner(System.in);
 
 	    public static void main(String[] args) {
+			String[] daysOfWeek = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+
 			try {
-				int number;
 				System.out.println("Enter a number from 1 to 7: ");
-				number = scanner.nextInt();
+				int number = scanner.nextInt();
 				scanner.close();
-				String[] daysOfWeek = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-				//number -=1;
+
 				System.out.println(daysOfWeek[number - 1]);
 				}
 			catch (Exception e){
